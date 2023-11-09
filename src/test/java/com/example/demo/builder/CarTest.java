@@ -23,6 +23,7 @@ class CarTest {
     @Test
     public void test2() {
         Car car = new Car();
+        System.out.println("alskjfvlkjdsbnfvkl");
         car.setColor("Test");
         car.setModel("Test");
         car.setBrand("Test");
