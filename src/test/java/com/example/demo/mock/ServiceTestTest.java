@@ -13,6 +13,7 @@ class ServiceTestTest {
     @Test
     public void test() {
         when(mockedService.math(5, 5)).thenReturn(10);
+        System.out.println("Test");
         System.out.println("Test message");
         ServiceTest serviceTest = new ServiceTest(mockedService);
         Integer calculation = serviceTest.calculation(5, 5);
