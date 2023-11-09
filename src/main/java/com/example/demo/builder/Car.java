@@ -1,5 +1,7 @@
 package com.example.demo.builder;
 
+import java.util.Objects;
+
 public class Car {
     private String color;
     private String model;
@@ -78,5 +80,17 @@ public class Car {
                 ", gps='" + gps + '\'' +
                 ", climatControl='" + climatControl + '\'' +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Car car)) return false;
+        return Objects.equals(getColor(), car.getColor()) && Objects.equals(getModel(), car.getModel()) && Objects.equals(getYear(), car.getYear()) && Objects.equals(getBrand(), car.getBrand()) && Objects.equals(getGps(), car.getGps()) && Objects.equals(getClimatControl(), car.getClimatControl());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getColor(), getModel(), getYear(), getBrand(), getGps(), getClimatControl());
     }
 }
